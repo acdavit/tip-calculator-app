@@ -1,0 +1,99 @@
+.label{
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+    margin: 6px 0;
+    margin-top: 32px;
+    width: 100%;
+}
+
+#bill{
+    margin-top: 0;
+}
+
+#zero{
+    color: #E17457;
+    text-align: right;
+}
+
+#people{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#app{
+    height: 100%;
+    max-width: 500px;
+    max-height: 1000px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: calc(100vh - 11fr) 11fr;
+}
+
+#card, #input{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+#card{
+    background: white;
+    border-radius: 25px 25px 0px 0px;
+}
+
+#input{
+    margin: 32px;
+    margin-bottom: 0px;
+}
+
+#logo-space{
+    display: grid;
+    place-items: center;
+}
+
+input[type="text"]{
+    background-color: #F3F9FA;
+}
+
+@media screen and (max-height: 845px) and (max-width: 999px){
+    #logo-space{
+        display: none;
+    }
+    #app{
+        grid-template-rows: 1fr;
+    }
+    #card{
+        border-radius: 0;
+    }
+}
+
+@media screen and (min-height: 1000px), (min-width: 500px){
+    #card{
+        border-radius: 25px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #app{
+        max-width: 920px;
+        max-height: 720px;
+        
+    }
+    #card{
+        max-height: 481px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        
+    }
+    #input{
+        max-height: 388px;
+        padding: 16px;
+        padding-right: 0;
+    }
+    .label{
+        margin-top: 40px;
+    }
+
+}
